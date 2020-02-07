@@ -1,0 +1,73 @@
+<div style="background-image: url('https://st.redbus.in/images/pilgrimages/homepage/Pilgrimages_main.jpg');
+  margin-top: -24px; color: white; height: 500px;  background-repeat:  no-repeat; width:100%; background-size:cover; text-align:center; "  >
+<!-- <img style="margin-top: -24px;" src=""
+ class="banner loaded"> -->
+ <br/><br/><br/><br/><br/>
+<h1 class="head fade-in" >Pilgrimage Packages</h1> 
+<label class="sub fade-in">Assured Darshan | Travel &amp; Stay | All Inclusive Packages</label>
+
+</div>
+<div >
+    <div class="row" style="text-align:center; ">
+          <div class="col-sm-4" style="background-image: url('https://st.redbus.in/images/pilgrimages/homepage/shirdi_home_tile.jpg'); width: 60%;
+          display: inline-block;
+    vertical-align: middle;
+    text-align: left;background-repeat:  no-repeat;
+    width: 353px;
+    height: 490px;
+    margin: .5em;">
+            <strong class="name truncate">shirdi</strong>
+          </div>
+           <div class="col-sm-3" style="background-image: url('https://st.redbus.in/images/pilgrimages/homepage/tirupati_home_tile.jpg')">
+            </div>
+         <div class="col-sm-3" style="background-image: url('')">
+          <img src="" alt="Mahabaleshwar Package">
+        </div>
+    </div>
+
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th >From</th>
+      <th >To</th>
+      <th >Prices</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let emp of e;let i=index">
+    <tr *ngIf="emp">
+      <!-- <td>{{emp.From}}</td>
+      <td>{{emp.To}}</td>
+      <td> Rs.{{emp.price}}/-</td> -->
+      </tr>
+  </ng-container>
+  </tbody>
+</table>
+
+
+<input id="name" name="name" type="text" class="form-control"
+      required minlength="4" appForbiddenName="bob"
+      [(ngModel)]="hero.name" #name="ngModel" >
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">
+
+  <div *ngIf="name.errors.required">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors.minlength">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors.forbiddenName">
+    Name cannot be Bob.
+  </div>
+
+</div>
+
+
+<input type="file" #image accept="image\*" name="image" [(ngModel)]="model.img" (change)="onfileselected($event.target.file)"> 
+<button class="btn btn-success" (click)="addimg">save</button>
+
+
+

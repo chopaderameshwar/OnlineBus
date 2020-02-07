@@ -1,0 +1,30 @@
+<p>Register Customer Data</p>
+
+<app-regchild
+             [all] = "gettotalcout()"
+             [male] = "gettotalmalecount()"
+             [female] = "gettotalfemalecout()"
+             (selectr) = "onredioselect($event)"></app-regchild>
+<table class="table">
+    <thead>
+      <tr>
+        <th >Name</th>
+        <th >Email</th>
+        <th >Mobile Number</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let emp of e;let i=index;">
+      <tr *ngIf=" selectoption=='all'|| selectoption==emp.gender">
+        <td>{{emp.name | mypipe:emp.gender}}</td>
+        <td>{{emp.email}}</td>
+        <td> {{emp.mobilenumber}}</td>
+        <td>{{emp.gender}}</td>
+        </tr>
+    </ng-container>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" [routerLink]="['/admin']">Back to Admin Page</button>
+
+  

@@ -1,0 +1,47 @@
+<!-- {{res | json}} -->
+<!-- <h1 style="margin-top: -15px; color: orange;  border-bottom: 1px solid red;">
+<marquee behavior="scroll" direction="left" scrollamount="50">Very Fast Scrolling</marquee> -->
+
+<!-- </h1> -->
+<div class="row" style=" text-align: center;">
+    <div class="col-sm-6" style="height: 400px;">
+      <h2 class="h2-heading">TOP BUS BOOKING ROUTES</h2>
+                 <table class="table">
+                    <thead>
+                      <tr>
+                        <th >From</th>
+                        <th >To</th>
+                        <th >Prices</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <ng-container *ngFor="let emp of res;let i=index">
+  
+                        <tr *ngIf="emp">
+                          <td><a [routerLink]="['/display',i]">{{emp.from}}</a></td>
+                          <td>{{emp.to}}</td>
+                          <td> Rs.{{emp.price}}/-</td>
+                        </tr>
+                      </ng-container>
+                    </tbody>
+                  </table>
+       </div>
+    <div class="col-sm-6" style="height: 400px;">
+      <h2 class="h2-heading">M TICKET VS E TICKET VS COUNTER TICKET</h2>
+        <div  class="row" >
+          <div  class="col-sm-4">
+            <img class="box1-img" src="https://s1.rdbuz.com/build/seo/images/M-ticket.png" alt="redBus M Ticket Image"><br>
+            <img class="box1-img" src="https://s1.rdbuz.com/build/seo/images/E-ticket.png" alt="redBus E Ticket Image"><br>
+            <img class="box1-img" src="https://s1.rdbuz.com/build/seo/images/C-ticket.png" alt="redBus counter Ticket Image"><br>
+            
+          </div >
+          <div  class="col-sm-8">
+              <p>An mticket is an SMS that is sent to your mobile after booking a bus ticket.</p><br>
+              <p>This is an electronic ticket issued and sent to your email after confirmation of your online booking.</p><br>
+              <p>Counter Ticket is the hard copy of your bus ticket required while boarding the bus.</p>
+          </div>
+        </div>
+        </div>
+
+
+        

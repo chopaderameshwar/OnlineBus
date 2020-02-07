@@ -1,0 +1,215 @@
+<!-- <div class="card bg-light" id="main" style="margin-top: -24px;">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Create Account</h4>
+        <p class="text-center">Get started with your account</p>
+        <form #frm="ngForm">
+
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+                <input class="form-control" #nm="ngModel" id="name" name="name" placeholder="Full name"
+                    [(ngModel)]="model.name" type="text" required minlength="5" maxlength="15">
+                <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                    <div *ngIf="nm.errors.required"><i>First Name is Required</i></div>
+                    <div *ngIf="nm.errors.minlength"><b>Name should be minimum of 5 letters</b></div>
+                </div>
+            </div>
+
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                </div>
+                <input class="form-control" #email="ngModel" placeholder="Email address" id="position" name="email"
+                    [(ngModel)]="model.email" type="email" ngModel name="email" required
+                    pattern="[a-zA-Z0-9]+@[a-z]+[.][a-z]+"><br>
+                <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                    <div *ngIf="email.errors.required">Email is Required</div>
+                    <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
+                </div>
+            </div>
+
+            <input type="radio" name="gender" [(ngModel)]="model.gender" value="male" checked> Male
+            <input type="radio" name="gender" [(ngModel)]="model.gender" value="female"> Female
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+
+                    <select class="custom-select" style="max-width: 70px; height: 30px;">
+                        <option selected="">+91</option>
+                        <option value="1">+72</option>
+                        <option value="2">+19</option>
+                        <option value="3">+70</option>
+                    </select>
+                    <mat-form-field hintLabel="Max 10 characters">
+                        <input matInput #input maxlength="10" name="mobilenumber" [(ngModel)]="model.mobilenumber"
+                            placeholder="Phone number">
+                        <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" id="createpassword" name="createpassword" 
+                    placeholder="create password" type="password" #pass="ngModel" [(ngModel)]="model.password" ngModel
+                    name="password" required minlength="8">
+                <div class="alert alert-danger" *ngIf="pass.invalid && pass.touched">
+                    <div *ngIf="pass.errors.required">Password is Required</div>
+                    <div *ngIf="pass.errors.minlength">Password should be minimum of 8 letters</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button [disabled]="frm.invalid" class="btn btn-primary btn-block" (click)="empadd()"> Create
+                    Account</button>
+            </div>
+            <p class="text-center" [routerLink]="['/login']">Have an account? <a href="">Log In</a> </p>
+
+        </form>
+    </article>
+</div> -->
+
+
+
+
+
+
+
+<div class="main">
+    <form #frm="ngForm">
+        <div class="container">
+            <!---heading---->
+            
+            <header class="heading"><marquee>Wel-Come Plz Registration</marquee> </header>
+            <hr>
+            <!---Form starting---->
+            <div class="row ">
+                <!--- For Name---->
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="firstname">User Name :</label> </div>
+                        <div class="col-xs-8">
+                            <!-- <input type="text" name="fname" id="fname" placeholder="Enter your  Name" class="form-control "> -->
+
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input class="form-control" #nm="ngModel" id="name" name="name" placeholder="Full name"
+                                    [(ngModel)]="model.name" type="text" required minlength="5" maxlength="15">
+                                <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                                    <div *ngIf="nm.errors.required"><i>First Name is Required</i></div>
+                                    <div *ngIf="nm.errors.minlength"><b>Name should be minimum of 5 letters</b></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-----For email---->
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label class="mail">Email :</label></div>
+                        <div class="col-xs-8">
+                            <!-- <input type="email" name="email"  id="email"placeholder="Enter your email" class="form-control" > -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <input class="form-control" #email="ngModel" placeholder="Email address" id="position"
+                                    name="email" [(ngModel)]="model.email" type="email" ngModel name="email" required
+                                    pattern="[a-zA-Z0-9]+@[a-z]+[.][a-z]+">
+                                <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                                    <div *ngIf="email.errors.required">#</div>
+                                    <div *ngIf="email.errors.pattern">#</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------For Phone number-------->
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-xs-4 ">
+                                <label class="gender">Gender:</label>
+                            </div>
+
+                            <div class="col-xs-4 male">
+                                <input type="radio" name="gender" [(ngModel)]="model.gender" value="male" checked> Male
+                            </div>
+
+                            <div class="col-xs-4 female">
+                                <input type="radio" name="gender" [(ngModel)]="model.gender" value="female"> Female
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label class="mail">mobile </label></div>
+                                    <div class="col-xs-8">
+                                        <!-- <input type="phone" name="phone"  id="email" placeholder="Enter Phone Number" class="form-control" > -->
+
+
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+
+                                                <mat-form-field hintLabel="Max 10 characters">
+                                                    <input matInput #input maxlength="10" name="mobilenumber"
+                                                        [(ngModel)]="model.mobilenumber" placeholder="Phone number">
+                                                    <mat-hint align="end">{{input.value?.length || 0}}/10</mat-hint>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-----For Password and confirm password---->
+                            <div class="col-sm-12" style="margin-top: 10px;">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label class="pass">Password :</label></div>
+                                    <div class="col-xs-8">
+                                        <!-- <input type="password" name="password" id="password" placeholder="Enter your Password" class="form-control"> -->
+                                        <div class="form-group input-group">
+                                            <div class="input-group-prepend">
+                                            </div>
+                                            <input class="form-control" id="createpassword" name="createpassword"
+                                                placeholder="create password" type="password" #pass="ngModel"
+                                                [(ngModel)]="model.password" ngModel name="password" required
+                                                minlength="8">
+                                            <div class="alert alert-danger" *ngIf="pass.invalid && pass.touched">
+                                                <div *ngIf="pass.errors.required">#</div>
+                                                <div *ngIf="pass.errors.minlength">Password should be minimum of 8
+                                                    letters</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-sm-12" style="margin-top: 10px;">
+                    <div class="btn btn-warning" >Submit</div>
+              </div> -->
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button [disabled]="frm.invalid" class="btn btn-primary btn-block"
+                                        (click)="empadd()"> Create Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>

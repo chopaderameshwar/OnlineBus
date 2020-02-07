@@ -1,0 +1,33 @@
+<div class="main" style=" text-align: center; ">
+    <h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+                <div class="row">
+                <div class="col-sm-6" >
+
+                    <label for="exampleInputUsername">Your name</label> 
+                    <input type="text" [(ngModel)]="model.name"  #nm="ngModel" class="form-control"  id="name" placeholder=" Enter Name" required minlength="5" maxlength="15"> <br/>
+                                    
+ 
+                 <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                 <div *ngIf="nm.errors.required"><i>First Name is Required</i></div>
+                <div *ngIf="nm.errors.minlength"><b>Name should be minimum of 5 letters</b></div>
+                </div>                                
+                    <label for="exampleInputEmail">Email Address</label> 
+                    <input type="email" [(ngModel)]="model.mail" class="form-control" #email="ngModel"  id="mail" placeholder=" Enter Email id"  ngModel name="Email"  required> <br/>
+                <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
+                <div *ngIf="email.errors.required">Email is Required</div>
+                <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
+                </div>
+                                       
+                     <label for="telephone">Mobile No.</label> 
+                      <input type="tel" [(ngModel)]="model.mobile" class="form-control" id="mobile" placeholder=" Enter 10-digit mobile no." required>
+                 </div>                            
+        <div class="col-sm-6" >
+        
+                    <label > Message</label> <br/>
+                     <textarea style="height: 135px; width: 50%;" [(ngModel)]="model.Message" class="form-control"   id="Message" placeholder="Enter Your Message" required></textarea> <br/>
+       <!-- <input type="file" #image accept="image/*"  (change)="onfileselected($event.target.files)">  -->
+                    <button mat-button type="button" (click)="addEmployee()" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+               
+         </div>
+    </div>
+</div>    

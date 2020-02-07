@@ -1,0 +1,33 @@
+<p>aboutinfoupload works!</p>
+<input type="text" class="form-control" id="about" name="about" [(ngModel)]="model.about" placeholder="about  upload">
+<div >
+  <button type="submit" class="btn btn-primary btl-lg" (click)="save()" >Save</button>
+</div>
+
+<table class="table table-bordered">
+
+  <tbody>
+    <ng-container *ngFor="let emp of e;let i=index">
+    
+    <tr *ngIf="emp">
+      <td>{{emp.about}}</td>
+     
+      <td>
+        <a class="btn btn-success btn-lg" (click)="editabout(i)">Edit</a>
+        <a class="btn btn-danger btn-lg" (click)="deleteabout(i)">Delete</a>
+      </td>
+    </tr>
+  </ng-container>
+  </tbody>
+  </table> 
+  <div class="form-group">
+    <div>
+      <input type="text" class="form-control" id="about" name="about" [(ngModel)]="model2.about" placeholder="about update">
+    </div>
+  
+  </div>
+  <div class="form-group"> 
+    <div>
+     <button type="submit" class="btn btn-default" (click)="updateabout()" >Update</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.offer {
+    padding: 28px 0;
+    transition: all .6s ease-in-out;
+   
+}
+/* .offerBox:hover{
+    padding: 8px 0;
+    transition: all .2s ease-in-out;
+
+} */
+.box1-content {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    color: #686868;
+    padding-top: 26px;
+}
+#name:hover
+{
+    color:  -webkit-linear-gradient(to left, #cc2c2c , #f3831a);
+    
+}
+th{
+    text-align: center;
+}
+/* .img11:hover{
+    width: 300px;
+} */
